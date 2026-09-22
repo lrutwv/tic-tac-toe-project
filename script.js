@@ -17,10 +17,16 @@ let playerXName = "Player X";
 let playerOName = "Player O";
 
 playerXInput.addEventListener("keydown", function (event) {
-    if (event.key === "Enter" && playerXInput.value !== "") {
-        playerXName = playerXInput.value;
+    if (event.key === "Enter") {
+
+        if (playerXInput.value.trim() === "") {
+            playerXName = "Player X";
+        } else {
+            playerXName = playerXInput.value;
+        }
 
         playerXInput.style.display = "none";
+
         playerXNameDisplay.textContent = playerXName;
         playerXNameDisplay.style.display = "block";
 
@@ -39,10 +45,16 @@ playerXNameDisplay.addEventListener("click", function () {
 });
 
 playerOInput.addEventListener("keydown", function (event) {
-    if (event.key === "Enter" && playerOInput.value !== "") {
-        playerOName = playerOInput.value;
+    if (event.key === "Enter") {
+
+        if (playerOInput.value.trim() === "") {
+            playerOName = "Player O";
+        } else {
+            playerOName = playerOInput.value;
+        }
 
         playerOInput.style.display = "none";
+
         playerONameDisplay.textContent = playerOName;
         playerONameDisplay.style.display = "block";
 
