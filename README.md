@@ -15,7 +15,7 @@ The project has a calm **tropical / Lovers Rock-inspired theme**, with dark gree
 * Responsive layout
 * Play Again and Reset Game options
 
-## 📚 What I Learned
+## What I Learned
 
 While making this project, I practiced:
 
