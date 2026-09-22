@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600&family=VT323&display=swap');
 
+
+/* ================================
+   WINNING GLITCH
+================================ */
+
 @keyframes winning-glitch {
+
     0% {
         opacity: 1;
     }
@@ -13,6 +19,8 @@
         opacity: 1;
     }
 }
+
+
 /* ================================
    RESET
 ================================ */
@@ -43,9 +51,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-   
 
-    color: #F5E5CB;
+    color: #F3E5C8;
 
     font-family: 'Montserrat', sans-serif;
 }
@@ -61,10 +68,10 @@ body {
 
     padding: 12px;
 
-    background-color: rgba(10, 30, 38, 0.72);
+    background-color: rgba(10, 28, 19, 0.78);
     background-image: url('./assets/dryad_plant_green.jpg');
 
-    border: 2px solid #D69A62;
+    border: 2px solid #D4A35F;
     border-radius: 12px;
 
     box-shadow:
@@ -86,9 +93,9 @@ body {
 
     padding: 12px;
 
-    background-color: rgba(9, 25, 32, 0.9);
+    background-color: rgba(9, 28, 18, 0.93);
 
-    border: 1px solid #8BA7A4;
+    border: 1px solid #486044;
     border-radius: 10px;
 
     position: relative;
@@ -113,7 +120,7 @@ body {
 
     letter-spacing: 1px;
 
-    color: #F7D9A7;
+    color: #F3D49A;
 
     line-height: 1;
 }
@@ -125,7 +132,7 @@ body {
 
     font-size: 16px;
 
-    color: #D8A978;
+    color: #D4A35F;
 
     letter-spacing: 1px;
 }
@@ -151,7 +158,7 @@ body {
 
     font-weight: 400;
 
-    color: #BFD3C9;
+    color: #B8C5A8;
 
     letter-spacing: 1px;
 }
@@ -169,12 +176,12 @@ body {
 .round-buttons button {
     padding: 5px 15px;
 
-    border: 1px solid #759B98;
+    border: 1px solid #486044;
     border-radius: 4px;
 
-    background-color: rgba(25, 58, 64, 0.92);
+    background-color: rgba(24, 58, 39, 0.95);
 
-    color: #F5E5CB;
+    color: #F3E5C8;
 
     font-family: 'VT323', monospace;
 
@@ -187,7 +194,7 @@ body {
 
 .mode-buttons button:hover,
 .round-buttons button:hover {
-    background-color: #315F61;
+    background-color: #2C5137;
 
     transform: translateY(-1px);
 }
@@ -199,11 +206,11 @@ body {
 
 .mode-buttons button.selected,
 .round-buttons button.selected {
-    background-color: #D69A62;
+    background-color: #D4A35F;
 
-    border-color: #F0B77D;
+    border-color: #E5BC79;
 
-    color: #10252B;
+    color: #102A1C;
 }
 
 
@@ -239,9 +246,9 @@ body {
 
     text-align: center;
 
-    background-color: rgba(24, 49, 54, 0.9);
+    background-color: rgba(24, 58, 39, 0.92);
 
-    border: 1px solid #507473;
+    border: 1px solid #486044;
     border-radius: 5px;
 }
 
@@ -254,7 +261,7 @@ body {
 
     font-weight: 400;
 
-    color: #D9B88F;
+    color: #D4A35F;
 }
 
 .player input {
@@ -262,14 +269,14 @@ body {
 
     padding: 5px 7px;
 
-    border: 1px solid #5D8582;
+    border: 1px solid #55705A;
     border-radius: 3px;
 
     outline: none;
 
-    background-color: rgba(7, 22, 28, 0.95);
+    background-color: rgba(7, 22, 13, 0.97);
 
-    color: #F4E5CD;
+    color: #F3E5C8;
 
     font-family: 'Montserrat', sans-serif;
 
@@ -279,11 +286,11 @@ body {
 }
 
 .player input::placeholder {
-    color: #79908F;
+    color: #8FA68A;
 }
 
 .player input:focus {
-    border-color: #D69A62;
+    border-color: #D4A35F;
 }
 
 
@@ -300,12 +307,12 @@ body {
 
     padding: 5px 7px;
 
-    border: 1px solid #5D8582;
+    border: 1px solid #55705A;
     border-radius: 3px;
 
-    background-color: rgba(7, 22, 28, 0.95);
+    background-color: rgba(7, 22, 13, 0.97);
 
-    color: #E8C79E;
+    color: #E5C98F;
 
     font-family: 'VT323', monospace;
 
@@ -335,7 +342,7 @@ body {
 
     font-size: 17px;
 
-    color: #E0B27E;
+    color: #D4A35F;
 
     letter-spacing: 1px;
 }
@@ -356,9 +363,9 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 
-    background-color: rgba(5, 18, 23, 0.96);
+    background-color: rgba(5, 18, 10, 0.98);
 
-    border: 2px solid #D69A62;
+    border: 2px solid #D4A35F;
 
     border-radius: 6px;
 
@@ -374,11 +381,11 @@ body {
 ================================ */
 
 .cell {
-    border: 1px solid #456C6B;
+    border: 1px solid #486044;
 
-    background-color: rgba(22, 48, 53, 0.94);
+    background-color: rgba(24, 58, 39, 0.95);
 
-    color: #F2D5A5;
+    color: #F3D49A;
 
     font-family: 'DM Serif Display', serif;
 
@@ -392,7 +399,7 @@ body {
 }
 
 .cell:hover {
-    background-color: #2B5A5A;
+    background-color: #2C5137;
 }
 
 .cell:active {
@@ -400,13 +407,17 @@ body {
 }
 
 
+/* ================================
+   WINNING CELLS
+================================ */
+
 .cell.winning-cell {
-    background-color: #D69A62;
-    color: #10252B;
+    background-color: #D4A35F;
+
+    color: #102A1C;
+
     animation: winning-glitch 0.2s steps(2) infinite;
 }
-
-
 
 
 /* ================================
@@ -428,9 +439,9 @@ body {
 
     text-align: center;
 
-    background-color: rgba(24, 49, 54, 0.92);
+    background-color: rgba(24, 58, 39, 0.95);
 
-    border: 1px solid #5D8582;
+    border: 1px solid #55705A;
 
     border-radius: 5px;
 }
@@ -444,7 +455,7 @@ body {
 
     font-weight: 400;
 
-    color: #BFD3C9;
+    color: #B8C5A8;
 }
 
 .score p {
@@ -452,14 +463,14 @@ body {
 
     font-size: 22px;
 
-    color: #E8C79E;
+    color: #E5C98F;
 }
 
 .score:nth-child(2) {
     padding: 0 20px;
 
-    border-left: 1px solid #456C6B;
-    border-right: 1px solid #456C6B;
+    border-left: 1px solid #486044;
+    border-right: 1px solid #486044;
 }
 
 
@@ -492,15 +503,15 @@ body {
 }
 
 .reset-game-button {
-    border: 1px solid #C68C5B;
+    border: 1px solid #B86F45;
 
-    background-color: rgba(40, 66, 67, 0.95);
+    background-color: rgba(29, 58, 39, 0.95);
 
-    color: #F5E5CB;
+    color: #F3E5C8;
 }
 
 .reset-game-button:hover {
-    background-color: #315F61;
+    background-color: #2C5137;
 
     transform: translateY(-1px);
 }
@@ -528,7 +539,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(5, 18, 23, 0.93);
+    background-color: rgba(5, 18, 10, 0.94);
 
     border-radius: 9px;
 }
@@ -540,9 +551,9 @@ body {
 
     text-align: center;
 
-    background-color: #183136;
+    background-color: #183A27;
 
-    border: 2px solid #D69A62;
+    border: 2px solid #D4A35F;
 
     border-radius: 8px;
 
@@ -559,7 +570,7 @@ body {
 
     font-weight: 400;
 
-    color: #F7D9A7;
+    color: #F3D49A;
 }
 
 .result-message {
@@ -569,19 +580,19 @@ body {
 
     font-size: 16px;
 
-    color: #BFD3C9;
+    color: #B8C5A8;
 }
 
 .play-again-button {
     padding: 6px 17px;
 
-    border: 1px solid #C68C5B;
+    border: 1px solid #B86F45;
 
     border-radius: 4px;
 
-    background-color: #28484C;
+    background-color: #284B32;
 
-    color: #F5E5CB;
+    color: #F3E5C8;
 
     font-family: 'VT323', monospace;
 
@@ -593,7 +604,7 @@ body {
 }
 
 .play-again-button:hover {
-    background-color: #396669;
+    background-color: #396642;
 
     transform: translateY(-1px);
 }
