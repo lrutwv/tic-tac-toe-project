@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tic Tac Toe</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game-panel">
+
+        <div class="game-box">
+
+            <!-- Game Header -->
+            <header class="game-header">
+                <h1>Tic Tac Toe</h1>
+                <p>Solo or Duo!</p>
+            </header>
+
+
+            <!-- Game Mode -->
+            <section class="game-mode">
+                <h2>Choose Game Mode</h2>
+
+                <div class="mode-buttons">
+                    <button type="button" class="two-player-button selected">2 Player</button>
+                    <button type="button" class="one-player-button">1 Player</button>
+                </div>
+            </section>
+
+            <!-- Round Options -->
+           <section class="round-options">
+              <h2>Choose Wins!</h2>
+
+               <div class="round-buttons">
+                  <button type="button">3 Points</button>
+                  <button type="button">5 Points</button>
+              </div>
+             </section>
+
+
+            <!-- Player Information -->
+            <section class="player-info">
+
+                <div class="player player-x">
+                    <h2>Player X</h2>
+                    <input type="text" placeholder="Enter name">
+                    <p class="player-x-name">Player X</p>
+                </div>
+
+                <div class="player player-o">
+                    <h2>Player O</h2>
+                    <input type="text" placeholder="Enter name">
+                    <p class="player-o-name">Player O</p>
+                    <p class="computer-name"> Computer </p>
+                </div>
+
+            </section>
+
+
+            <!-- Game Status -->
+            <section class="game-status">
+                <p>Player X's Turn</p>
+            </section>
+
+
+            <!-- Game Board -->
+            <section class="game-board">
+
+                <button class="cell" type="button"></button>
+                <button class="cell" type="button"></button>
+                <button class="cell" type="button"></button>
+
+                <button class="cell" type="button"></button>
+                <button class="cell" type="button"></button>
+                <button class="cell" type="button"></button>
+
+                <button class="cell" type="button"></button>
+                <button class="cell" type="button"></button>
+                <button class="cell" type="button"></button>
+
+            </section>
+
+
+            <!-- Scoreboard -->
+            <section class="scoreboard">
+
+                <div class="score">
+                    <h2 class="score-x-name">Player X</h2>
+                    <p>0</p>
+                </div>
+
+                <div class="score">
+                    <h2>Draws</h2>
+                    <p>0</p>
+                </div>
+
+                <div class="score">
+                    <h2 class="score-o-name">Player O</h2>
+                    <p>0</p>
+                </div>
+
+            </section>
+
+
+            <!-- Game Controls -->
+            <section class="game-controls">
+
+               <button class="reset-game-button" type="button">
+                   Reset Game
+               </button>
+
+            </section>
+
+            <div class="result-overlay">
+
+              <div class="result-box">
+                 <h2 class="result-title">X Wins!</h2>
+                   <p class="result-message">Great game!</p>
+                  <button class="play-again-button" type="button">
+                      Play Again
+                    </button>
+               </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

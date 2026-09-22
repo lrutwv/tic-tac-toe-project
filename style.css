@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600&family=VT323&display=swap');
+
+@keyframes winning-glitch {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.65;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   PAGE
+================================ */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    background:
+        url('./assets/flo.jfif');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+
+    color: #F5E5CB;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ================================
+   OUTER PANEL
+================================ */
+
+.game-panel {
+    width: 100%;
+    max-width: 900px;
+
+    padding: 12px;
+
+    background-color: rgba(10, 30, 38, 0.72);
+    background-image: url('./assets/dryad_plant_green.jpg');
+
+    border: 2px solid #D69A62;
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.5);
+
+    position: relative;
+}
+
+
+/* ================================
+   GAME BOX
+================================ */
+
+.game-box {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    padding: 12px;
+
+    background-color: rgba(9, 25, 32, 0.9);
+
+    border: 1px solid #8BA7A4;
+    border-radius: 10px;
+
+    position: relative;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.game-header {
+    text-align: center;
+
+    margin-bottom: 6px;
+}
+
+.game-header h1 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 34px;
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    color: #F7D9A7;
+
+    line-height: 1;
+}
+
+.game-header p {
+    margin-top: 2px;
+
+    font-family: 'VT323', monospace;
+
+    font-size: 16px;
+
+    color: #D8A978;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================================
+   GAME MODE
+================================ */
+
+.game-mode {
+    text-align: center;
+
+    margin-bottom: 6px;
+}
+
+.game-mode h2,
+.round-options h2 {
+    margin-bottom: 3px;
+
+    font-family: 'VT323', monospace;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    color: #BFD3C9;
+
+    letter-spacing: 1px;
+}
+
+.mode-buttons,
+.round-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 6px;
+}
+
+.mode-buttons button,
+.round-buttons button {
+    padding: 5px 15px;
+
+    border: 1px solid #759B98;
+    border-radius: 4px;
+
+    background-color: rgba(25, 58, 64, 0.92);
+
+    color: #F5E5CB;
+
+    font-family: 'VT323', monospace;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.mode-buttons button:hover,
+.round-buttons button:hover {
+    background-color: #315F61;
+
+    transform: translateY(-1px);
+}
+
+.mode-buttons button:active,
+.round-buttons button:active {
+    transform: translateY(1px);
+}
+
+.mode-buttons button.selected,
+.round-buttons button.selected {
+    background-color: #D69A62;
+
+    border-color: #F0B77D;
+
+    color: #10252B;
+}
+
+
+/* ================================
+   POINT OPTIONS
+================================ */
+
+.round-options {
+    text-align: center;
+
+    margin-bottom: 6px;
+}
+
+
+/* ================================
+   PLAYER INFORMATION
+================================ */
+
+.player-info {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-bottom: 4px;
+}
+
+.player {
+    width: 155px;
+
+    padding: 6px;
+
+    text-align: center;
+
+    background-color: rgba(24, 49, 54, 0.9);
+
+    border: 1px solid #507473;
+    border-radius: 5px;
+}
+
+.player h2 {
+    margin-bottom: 3px;
+
+    font-family: 'VT323', monospace;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    color: #D9B88F;
+}
+
+.player input {
+    width: 100%;
+
+    padding: 5px 7px;
+
+    border: 1px solid #5D8582;
+    border-radius: 3px;
+
+    outline: none;
+
+    background-color: rgba(7, 22, 28, 0.95);
+
+    color: #F4E5CD;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 9px;
+
+    text-align: center;
+}
+
+.player input::placeholder {
+    color: #79908F;
+}
+
+.player input:focus {
+    border-color: #D69A62;
+}
+
+
+/* ================================
+   PLAYER NAME DISPLAY
+================================ */
+
+.computer-name,
+.player-x-name,
+.player-o-name {
+    display: none;
+
+    width: 100%;
+
+    padding: 5px 7px;
+
+    border: 1px solid #5D8582;
+    border-radius: 3px;
+
+    background-color: rgba(7, 22, 28, 0.95);
+
+    color: #E8C79E;
+
+    font-family: 'VT323', monospace;
+
+    font-size: 15px;
+
+    text-align: center;
+}
+
+.player-x-name,
+.player-o-name {
+    cursor: pointer;
+}
+
+
+/* ================================
+   GAME STATUS
+================================ */
+
+.game-status {
+    margin: 4px auto;
+
+    text-align: center;
+}
+
+.game-status p {
+    font-family: 'VT323', monospace;
+
+    font-size: 17px;
+
+    color: #E0B27E;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================================
+   GAME BOARD
+================================ */
+
+.game-board {
+    width: 250px;
+    height: 250px;
+
+    margin: 5px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    background-color: rgba(5, 18, 23, 0.96);
+
+    border: 2px solid #D69A62;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 7px 16px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ================================
+   BOARD CELLS
+================================ */
+
+.cell {
+    border: 1px solid #456C6B;
+
+    background-color: rgba(22, 48, 53, 0.94);
+
+    color: #F2D5A5;
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 46px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.cell:hover {
+    background-color: #2B5A5A;
+}
+
+.cell:active {
+    transform: scale(0.96);
+}
+
+
+.cell.winning-cell {
+    background-color: #D69A62;
+    color: #10252B;
+    animation: winning-glitch 0.2s steps(2) infinite;
+}
+
+
+
+
+/* ================================
+   SCOREBOARD
+================================ */
+
+.scoreboard {
+    width: 90%;
+    max-width: 390px;
+
+    margin: 5px auto;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px 11px;
+
+    text-align: center;
+
+    background-color: rgba(24, 49, 54, 0.92);
+
+    border: 1px solid #5D8582;
+
+    border-radius: 5px;
+}
+
+.score h2 {
+    margin-bottom: 0;
+
+    font-family: 'VT323', monospace;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    color: #BFD3C9;
+}
+
+.score p {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 22px;
+
+    color: #E8C79E;
+}
+
+.score:nth-child(2) {
+    padding: 0 20px;
+
+    border-left: 1px solid #456C6B;
+    border-right: 1px solid #456C6B;
+}
+
+
+/* ================================
+   GAME CONTROLS
+================================ */
+
+.game-controls {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: 5px;
+}
+
+.game-controls button {
+    padding: 5px 15px;
+
+    border-radius: 4px;
+
+    font-family: 'VT323', monospace;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.reset-game-button {
+    border: 1px solid #C68C5B;
+
+    background-color: rgba(40, 66, 67, 0.95);
+
+    color: #F5E5CB;
+}
+
+.reset-game-button:hover {
+    background-color: #315F61;
+
+    transform: translateY(-1px);
+}
+
+.game-controls button:active {
+    transform: translateY(1px);
+}
+
+
+/* ================================
+   RESULT OVERLAY
+================================ */
+
+.result-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(5, 18, 23, 0.93);
+
+    border-radius: 9px;
+}
+
+.result-box {
+    width: 250px;
+
+    padding: 22px 18px;
+
+    text-align: center;
+
+    background-color: #183136;
+
+    border: 2px solid #D69A62;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.result-title {
+    margin-bottom: 7px;
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    color: #F7D9A7;
+}
+
+.result-message {
+    margin-bottom: 12px;
+
+    font-family: 'VT323', monospace;
+
+    font-size: 16px;
+
+    color: #BFD3C9;
+}
+
+.play-again-button {
+    padding: 6px 17px;
+
+    border: 1px solid #C68C5B;
+
+    border-radius: 4px;
+
+    background-color: #28484C;
+
+    color: #F5E5CB;
+
+    font-family: 'VT323', monospace;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.play-again-button:hover {
+    background-color: #396669;
+
+    transform: translateY(-1px);
+}
+
+.play-again-button:active {
+    transform: translateY(1px);
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 7px;
+    }
+
+    .game-panel {
+        padding: 8px;
+    }
+
+    .game-box {
+        padding: 8px;
+    }
+
+    .game-header h1 {
+        font-size: 30px;
+    }
+
+    .player {
+        width: 145px;
+    }
+
+    .game-board {
+        width: 225px;
+        height: 225px;
+    }
+
+    .cell {
+        font-size: 41px;
+    }
+
+    .scoreboard {
+        width: 100%;
+    }
+}
